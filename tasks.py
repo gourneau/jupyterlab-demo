@@ -55,6 +55,8 @@ def build(ctx, env_name=env_name, kernel=True):
         jupyter labextension install bqplot@0.4.6 --no-build &&
         jupyter labextension install jupyter-leaflet@0.11 --no-build &&
         jupyter lab clean && jupyter lab build --dev-build=False
+        jupyter labextension install @jupyter-voila/jupyterlab-preview
+        jupyter serverextension enable voila --sys-prefix
         """.format(source, env_name).strip().replace('\n', ''))
     if kernel:
         ctx.run("{0!s} activate {1!s} && ipython kernel install --name {1!s} --display-name {1!s} --sys-prefix".format(source, env_name))
