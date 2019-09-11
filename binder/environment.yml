@@ -2,7 +2,7 @@ channels:
 - conda-forge
 dependencies:
 # Jupyter
-- jupyterlab=1.0
+- jupyterlab=1.1.2
 - nodejs=11
 - nbconvert=5.5
 - widgetsnbextension=3.5
@@ -24,12 +24,6 @@ dependencies:
 - pyyaml
 - traittypes==0.2.1
 - invoke=1.2
-# C++ Kernel
-- xeus-cling=0.6
-- xtensor=0.20.8
-- xtensor-blas=0.16.1
-- xwidgets=0.18.0
-- xleaflet=0.9.0
 # R Kernel
 - r-ggplot2
 - r-irkernel=1.0
